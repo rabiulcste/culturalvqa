@@ -226,18 +226,37 @@
 </section>
 <!-- End of Dataset Analysis-->
 
-<!-- Dataset Analysis-->
+<!-- Model Performance-->
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Benchmarking Open-source and closed-source models</h2>
+    <h2 class="title is-3">Benchmarking</h2>
+    <h3 class="title is-4">Open-source and closed-source models</h3>
+    <div class="content has-text-justified">
+      <p>We report the LAVE scores of open-source and closed-source vision-language models on the proposed \dataset benchmark, which range across countries from 43\% to 72\% for \textsc{GPT-4}, the best-performing model. The results indicate a significant performance gap between closed-source models and the best-performing open-source models (\textsc{Intern-VL} for most cases), with an average difference of 11.71\% points. This gap is particularly pronounced in countries from Africa (Ethiopia, Nigeria) and the Middle East (Iran, Turkey).</p>
+      <figure class="image is-inline-block">
+        <img src="static/images/lave_score_models_main_table.png" alt="model performance">
+      </figure>
+    </div>
 
-    <figure class="image is-inline-block">
-      <img src="static/images/lave_score_models_main_table.png" alt="model performance">
-    </figure>
-    <p>We report the LAVE scores of open-source and closed-source vision-language models on the proposed \dataset benchmark, which range across countries from 43\% to 72\% for \textsc{GPT-4}, the best-performing model. The results indicate a significant performance gap between closed-source models and the best-performing open-source models (\textsc{Intern-VL} for most cases), with an average difference of 11.71\% points. This gap is particularly pronounced in countries from Africa (Ethiopia, Nigeria) and the Middle East (Iran, Turkey).</p>
+    <h3 class="title is-4">Degree of visual understanding required</h3>
+    <p>Our evaluations with GPT-4 show that while adding country and visual contexts improves accuracy, they still fall short compared to the full vision-language model (VLM) that integrates detailed visual information. This confirms that accurate answers require a substantial degree of visual comprehension.</p>      
+    <div class="content has-text-justified">
+      <figure class="image is-inline-block">
+        <img src="static/images/llm_only_performance.png" alt="model performance">
+      </figure>
+    </div>
+
+    <h3 class="title is-4">Human vs. AI Performance on Cultural Questions</h3>
+    <div>
+      <p>In our evaluation using the LAVE metric on 1,325 culturally themed questions, humans familiar with the specific cultures achieved accuracy between 55% and 85%, with countries like Iran seeing scores over 80%. However, a significant gap was observed when comparing these results to AI performance using GPT-4, particularly in non-Western countries such as Iran, Nigeria, and Ethiopia, where the discrepancy exceeded 33%. This highlights the AI's stronger grasp of Western cultural concepts due to their more prevalent representation in its training data.</p>
+      <figure class="image is-inline-block">
+        <img src="static/images/human_performance_vs_models.png" alt="model performance">
+      </figure>
+    </div>
   </div>
-</section>
-<!-- End of Dataset Analysis-->
+
+  </section>
+<!-- End of Model Performance-->
 
 
 
@@ -320,7 +339,13 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@misc{Nayak2024Benchmarking,
+        title={Benchmarking Vision Language Models for Cultural Understanding},
+        author={Nayak, Shravan and Jain, Kanishk and Awal, Rabiul and Reddy, Siva and van Steenkiste, Sjoerd and Hendricks, Lisa Anne and Stanczak, Karolina and Agrawal, Aishwarya},
+        year={2024},
+        note={Unpublished manuscript}
+      }
+      </code></pre>
     </div>
 </section>
 <!--End BibTex citation -->

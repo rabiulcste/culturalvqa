@@ -156,4 +156,11 @@ pre {
 }
 
 
+pre code {
+  background-color: #fafafa !important;
+  display: block;
+  padding: 0; /* Remove padding */
+  overflow-x: auto;
+}
+
 

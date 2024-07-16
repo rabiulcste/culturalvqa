@@ -95,9 +95,9 @@
                         <a href="" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
+                          <i class="fas fa-database"></i>
                         </span>
-                        <span>Paper</span>
+                        <span>Dataset (incoming)</span>
                       </a>
                     </span>
 
@@ -125,12 +125,12 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2407.10920" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv (incoming)</span>
+                  <span>arXiv</span>
                 </a>
               </span>
             </div>
@@ -146,10 +146,11 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/culture_vqa_samples.jpg" id="tree" alt="cultural vqa dataset random samples" style="width:100%; height:auto;">
-      <h2 class="subtitle has-text-centered">
-        Overview of our VisMIn benchmark. ViMin consists of four types of minimal-changes -- object, attribute, count and spatial relation -- between two image-captions pairs. The evaluation task requires a model to predict the correct image-caption match given: 1) two images and one caption, 2) two captions and one image.
-      </h2>
+      <img src="static/images/culture_vqa_samples.jpg" id="tree" alt="cultural vqa dataset random samples" style="width:100%; height:auto;"> 
+      <br><br>
+      <p class="subtitle has-text-centered">
+        Samples from CulturalVQA. Our dataset is comprised of images presenting cultural concepts from 11 countries across five facets: traditions, rituals, food, drink, and clothing. It further includes questions probing cultural understanding of the concepts presented in the images and answers to these questions.
+      </p>
     </div>
   </div>
 </section>
@@ -163,11 +164,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Foundation models and vision-language pre-training have notably advanced Vision Language Models (VLMs), enabling multimodal processing of visual and linguistic data. However, their performance has been typically assessed on general scene understanding -- recognizing objects, attributes, and actions -- rather than cultural comprehension.
-          This study introduces \dataset, a visual question-answering benchmark aimed at assessing VLM's geo-diverse cultural understanding. We curate a diverse collection of \nquestions image - question pairs with 1-5 answers per question representing cultures from \ncountries countries across 5 continents. % To this end, we curate a cultural-aware repository of image--text pairs comprising a wide array of multicultural visual concepts. 
-    The questions probe understanding of various facets of culture such as clothing, food, drinks, rituals, and traditions.
-  Benchmarking VLMs on \dataset, including GPT-4V and Gemini, reveals disparity in their level of cultural understanding across regions, with strong cultural understanding capabilities for North America while significantly weaker capabilities for Africa. We observe disparity in their performance across cultural facets too, with clothing, rituals, and traditions seeing higher performances than food and drink.   
-  These disparities help us identify areas where VLMs lack cultural understanding and demonstrate the potential of \dataset as a comprehensive evaluation set for gauging VLM progress in understanding diverse cultures.
+            Foundation models and vision-language pre-training have notably advanced Vision Language Models (VLMs), enabling multimodal processing of visual and linguistic data. However, their performance has been typically assessed on general scene understanding - recognizing objects, attributes, and actions - rather than cultural comprehension.
+          This study introduces CulturalVQA, a visual question-answering benchmark aimed at assessing VLM's geo-diverse cultural understanding. We curate a diverse collection of 2378 image - question pairs with 1-5 answers per question representing cultures from 11 countries across 5 continents. The questions probe understanding of various facets of culture such as clothing, food, drinks, rituals, and traditions.
+ Benchmarking VLMs on CulturalVQA, including GPT-4V and Gemini, reveals disparity in their level of cultural understanding across regions, with strong cultural understanding capabilities for North America while significantly weaker capabilities for Africa. We observe disparity in their performance across cultural facets too, with clothing, rituals, and traditions seeing higher performances than food and drink.   
+  These disparities help us identify areas where VLMs lack cultural understanding and demonstrate the potential of CulturalVQA as a comprehensive evaluation set for gauging VLM progress in understanding diverse cultures.
           </p>
         </div>
       </div>
@@ -178,34 +178,34 @@
 
 
 <!-- Image carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
+       <div class="item"> -->
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <!-- <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           First image description.
         </h2>
       </div>
-      <div class="item">
+      <div class="item"> -->
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <!-- <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           Second image description.
         </h2>
       </div>
-      <div class="item">
+      <div class="item"> -->
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <!-- <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
          Third image description.
        </h2>
      </div>
-     <div class="item">
+     <div class="item"> -->
       <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+      <!-- <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-centered">
         Fourth image description.
       </h2>
@@ -213,7 +213,7 @@
   </div>
 </div>
 </div>
-</section>
+</section> -->
 <!-- End image carousel -->
 
 
@@ -222,49 +222,85 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3">Dataset analysis</h2>
       <div class = "content has-text-justified">
-      <p><strong>Images, Question and Answer:</strong> Our dataset comprises of unique images. We collected questions in total. We present the number of unique questions per country (below). Our dataset consists of manually curated answers in total.</p>    
+      <p><strong>Images, Question and Answer:</strong> Our dataset comprises of 2328 unique images. We collected 2378 questions in total from 11 countries asking the local annotators to create questions for images from their culture such that it is easy for the locals to answer but challenging for outsiders. We present the number of unique questions per country (below). Our dataset consists of 7206 manually curated answers in total (each question has 1-5 answers).</p>    
       <figure class="image is-inline-block">
         <img src="static/images/comprehensive_country_data_analysis.png" alt="anlaysis">
       </figure>
-      <p>Comparative analysis of data by country. The figure presents three aspects: (A) unique counts of images, questions, and answers, (B) average lengths of questions and answers, and (C) average confidence scores across countries, showcasing variations and trends in \dataset.</p>
+      <p style="text-align: center;">Comparative analysis of data by country. The figure presents three aspects: (A) unique counts of images, questions, and answers, (B) average lengths of questions and answers, and (C) average number of answers and inter-annotator agreement scores across countries, showcasing variations and trends in CulturalVQA.</p>
       </div>
 
       <div class="content has-text-justified">
       <p><strong>Cultural concepts:</strong> According to the pie chart in the figure below, food-related questions are most prevalent, accounting for 31.6% of the dataset, followed closely by traditions and rituals, which represent 28.6% and 22.6% respectively. Thus, roughly 50% of the questions in our dataset probe for cultural understanding of the intangible aspects of culture (rituals and traditions)! The <strong>word clouds</strong> generated from the collected answers reveal diverse expressions of rituals and traditions represented by terms like <em>hamam</em> (Turkey) and <em>meskel</em> (Ethiopia). Further, the food category includes diverse items such as <em>feijoada</em> (Brazil), <em>fufu</em> (Nigeria), and <em>vada</em> (India) indicating a geo-diverse culinary scope. While the clothing category is the least prevalent in the dataset, it shows the highest variety in terms of collected answers.</p>      
       <figure class="image is-inline-block">
-        <img src="static/images/facet_analysis_wordclouds_pie_chart.png" alt="anlaysis">
+        <img src="static/images/facets.png" alt="anlaysis">
       </figure>
+      <p style="text-align: center;">Word clouds representing the answers in CulturalVQA across five facets of culture: clothing, drink, food, rituals, and traditions. In the bottom right, a breakdown of cultural facets in data is depicted.</p>
       </div> 
   </div>
 </section>
 <!-- End of Dataset Analysis-->
-
 <!-- Model Performance-->
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3">Benchmarking</h2>
-    <h3 class="title is-4">Open-source and closed-source models</h3>
-    <div class="content has-text-justified">
-      <p>We report the LAVE scores of open-source and closed-source vision-language models on the proposed \dataset benchmark, which range across countries from 43\% to 72\% for \textsc{GPT-4}, the best-performing model. The results indicate a significant performance gap between closed-source models and the best-performing open-source models (\textsc{Intern-VL} for most cases), with an average difference of 11.71\% points. This gap is particularly pronounced in countries from Africa (Ethiopia, Nigeria) and the Middle East (Iran, Turkey).</p>
-      <figure class="image is-inline-block">
-        <img src="static/images/lave_score_models_main_table.png" alt="model performance">
-      </figure>
-    </div>
 
     <h3 class="title is-4">Degree of visual understanding required</h3>
-    <p>Our evaluations with GPT-4 show that while adding country and visual contexts improves accuracy, they still fall short compared to the full vision-language model (VLM) that integrates detailed visual information. This confirms that accurate answers require a substantial degree of visual comprehension.</p>      
+    <p>Our evaluations with GPT-4 show that while adding country and, visual contexts in the form of google lens entities improves accuracy, they still fall short compared to the full vision-language model (VLM) that integrates detailed visual information. This confirms that accurate answers require a substantial degree of visual comprehension.</p>      
     <div class="content has-text-justified">
-      <figure class="image is-inline-block">
-        <img src="static/images/llm_only_performance.png" alt="model performance">
+      <figure>
+        <img style="height: 500px; width: 500px; display: block; margin: auto;" src="static/images/llm_only_performance.png" alt="model performance">
       </figure>
+      <p style="text-align: center;">
+        Baseline evaluation of the degree of visual understanding required in CulturalVQA: LLM-only, LLM with a country-specific context, LLM with Google Lens entities, and GPT-4V.
+      </p>
     </div>
 
-    <h3 class="title is-4">Human vs. AI Performance on Cultural Questions</h3>
-    <div>
-      <p>In our evaluation using the LAVE metric on 1,325 culturally themed questions, humans familiar with the specific cultures achieved accuracy between 55% and 85%, with countries like Iran seeing scores over 80%. However, a significant gap was observed when comparing these results to AI performance using GPT-4, particularly in non-Western countries such as Iran, Nigeria, and Ethiopia, where the discrepancy exceeded 33%. This highlights the AI's stronger grasp of Western cultural concepts due to their more prevalent representation in its training data.</p>
+    <h3 class="title is-4">Open-source and closed-source models</h3>
+    <div class="content has-text-justified">
+      <p>We report the LAVE scores of open-source and closed-source vision-language models on the proposed CulturalVQA benchmark, which range across countries from 43% to 72% for GPT-4, the best-performing model. Notably, there's a considerable performance gap between closed-source models and the best open-source models. This gap is striking in African-Islamic cultures (Ethiopia, Nigeria, Iran, and Turkey), with a 29.7% gap for Ethiopia, where models struggle the most.</p>
       <figure class="image is-inline-block">
-        <img src="static/images/human_performance_vs_models.png" alt="model performance">
+        <img src="static/images/model_performance.png" alt="model performance">
       </figure>
+      <p style="text-align: center;">
+        LAVE accuracies of open- and closed-source models on CulturalVQA. Best-performing results per country are highlighted in <span style="background-color: rgb(146, 241, 146)">green</span>, and best-performing results among open-source models are highlighted in <span style="background-color: rgb(148, 181, 233)">blue</span>.
+      </p>
+    </div>
+
+    <h3 class="title is-4">Performance across facets</h3>
+    <div class="content has-text-justified">
+      <p>We report the model performance across 5 cultural facets: food, drinks, clothing, rituals and traditions. Generally, we find that proprietary models tend to perform better on intangible concepts - rituals, and traditions, compared to drink and food. Indeed, the highest performance of GPT-4 is achieved in the rituals facet (>60%), whereas in the clothing facet, it achieves a lower performance of ~ 53%</p>
+      <figure>
+        <img style="height: 400px; width: 600px; display: block; margin: auto;" src="static/images/facet_wise_accuracy.png" alt="model performance">
+      </figure>
+      <p style="text-align: center;">
+        VLM performance across facets as measured using LAVE accuracies.
+      </p>
+    </div>
+
+  <h3 class="title is-4">Human vs. AI Performance on CulturalVQA</h3>
+    <div>
+      <p>In our evaluation using the LAVE metric on 1,455 questions, humans familiar with the specific cultures achieved accuracy between 55% and 85%, with countries like Iran seeing scores over 80%. However, a significant gap was observed when comparing these results to AI performance using GPT-4, particularly in non-Western countries such as  Iran, Nigeria, India, Turkey, and Ethiopia, where the discrepancy exceeded 10%. This highlights the AI's stronger grasp of Western cultural concepts due to their more prevalent representation in its training data.</p>
+      <br>
+      <figure>
+        <img style="height: 400px; width: 600px; display: block; margin: auto;" src="static/images/performance_difference.png" alt="model performance">
+      </figure>
+      <p style="text-align: center;">
+        Performance gap between the best open-source and closed-source models compared to human performance. Negative values indicate where models underperform relative to humans.
+      </p>
+    </div>
+
+  <br>
+  <h3 class="title is-4">Qualitative Analysis of GPT-4</h3>
+    <div>
+      <figure>
+        <img src="static/images/qualitative.png" alt="model performance">
+      </figure>
+      <p style="text-align: center;">
+        Qualitative failure examples of GPT-4 predictions.
+      </p>
+      <br>
+      <p>Our qualitative evaluation of the best-performing model, GPT-4, highlights its limitations in recognizing and interpreting cultural nuances. For instance, GPT-4 overlooks the cultural significance of intangible cultural concepts like coral beads in Nigeria, which symbolize wealth and heritage but are treated merely as decorative objects, as well as it fails to recognize the symbolic connection between cows and planet Earth in Indian culture (see figure above).
+      Focusing on tangible cultural concepts, the model's shortcomings are evident as it inaccurately recognizes cultural entities and objects. For instance, it mislabels <i>Naghali</i>, a traditional Iranian storyteller as a Dervish and mistakes a traditional Turkish tea glass for a tulip glass, commonly used for serving beer. These examples reveal how GPT-4 struggles with both tangible and intangible cultural concepts: it has difficulties distinguishing between visually similar but culturally distinct entities and objects, and it lacks a deep understanding of cultural beliefs and symbolic meanings.</p>
     </div>
   </div>
 
@@ -275,49 +311,47 @@
 
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
       <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <div class="publication-video">
-            <!-- Youtube embed code here -->
             <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End youtube video -->
 
 
 <!-- Video carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Another Carousel</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
           <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
+            
             <source src="static/videos/carousel1.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video2">
           <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
+            
             <source src="static/videos/carousel2.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video3">
           <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
+            
             <source src="static/videos/carousel3.mp4"
             type="video/mp4">
           </video>
@@ -325,7 +359,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End video carousel -->
 
 
@@ -334,7 +368,7 @@
 
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
@@ -344,7 +378,7 @@
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
 
 
@@ -354,12 +388,15 @@
     <h2 class="title is-3">Citation</h2>
     <p>If you found this work useful in your own research, please consider citing the following:</p>
       <pre><code>
-        @misc{Nayak2024Benchmarking,
-          title={Benchmarking Vision Language Models for Cultural Understanding},
-          author={Nayak, Shravan and Jain, Kanishk and Awal, Rabiul and Reddy, Siva and van Steenkiste, Sjoerd and Hendricks, Lisa Anne and Stanczak, Karolina and Agrawal, Aishwarya},
+        @misc{nayak2024benchmarkingvisionlanguagemodels,
+          title={Benchmarking Vision Language Models for Cultural Understanding}, 
+          author={Shravan Nayak and Kanishk Jain and Rabiul Awal and Siva Reddy and Sjoerd van Steenkiste and Lisa Anne Hendricks and Karolina Stańczak and Aishwarya Agrawal},
           year={2024},
-          note={Unpublished manuscript}
-        }
+          eprint={2407.10920},
+          archivePrefix={arXiv},
+          primaryClass={cs.CV},
+          url={https://arxiv.org/abs/2407.10920}, 
+    }
       </code></pre>
   </div>
 </section>
@@ -372,13 +409,9 @@
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+          <p style="text-align: center;">
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.</a>
           </p>
-
         </div>
       </div>
     </div>

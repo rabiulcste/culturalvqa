@@ -164,3 +164,22 @@ pre code {
 }
 
 
+
+/* Style for navbar */
+
+/* Ensure the navbar menu is visible by default on desktop */
+.navbar-menu {
+  display: flex;
+}
+
+/* Hide the navbar menu by default on mobile */
+@media screen and (max-width: 1024px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  /* Show the navbar menu when the burger is active */
+  .navbar-burger.is-active + .navbar-menu {
+    display: block;
+  }
+}

@@ -346,5 +346,18 @@
 
     <!-- End of Statcounter Code -->
 
+  <!-- Add this script at the end of your body tag -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navbarBurger = document.getElementById('navbarBurger');
+      const navbarMenu = document.getElementById('navbarMenu');
+
+      navbarBurger.addEventListener('click', () => {
+        navbarBurger.classList.toggle('is-active');
+        navbarMenu.classList.toggle('is-active');
+      });
+    });
+  </script>
+
   </body>
   </html>
